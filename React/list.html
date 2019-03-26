@@ -29,13 +29,24 @@
             render () {
                 return (
                     <div>
-                    <ul>
-                        <li value="Mamma" onClick={((e) => this.handleClick(e))}>Mamma</li>
-                        <li value="Babbo" onClick={((e) => this.handleClick(e))}>Babbo</li>
-                        <li value="Zio"  onClick={((e) => this.handleClick(e))}>Zio</li>
-                    </ul>
+                    <List callback={this.handleClick}/>
                     <Stringa selection={this.state.selection}/>
                     </div>
+                );
+            }
+        }
+
+        class List extends React.Component {
+            constructor(props) {
+                super(props);
+            }
+            render(props) {
+                return(
+                    <ul>
+                        <li value="Mamma" onClick={this.props.callback}>Mamma</li> 
+                        <li value="Babbo" onClick={this.props.callback}>Babbo</li>
+                        <li value="Zio" onClick={this.props.callback}>Zio</li>
+                    </ul>
                 );
             }
         }
