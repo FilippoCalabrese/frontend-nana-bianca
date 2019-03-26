@@ -29,9 +29,11 @@
             render () {
                 return (
                     <div>
-                    <li value="Mamma" onClick={((e) => this.handleClick(e))}>Mamma</li>
-                    <li value="Babbo" onClick={((e) => this.handleClick(e))}>Babbo</li>
-                    <li value="Zio"  onClick={((e) => this.handleClick(e))}>Zio</li>
+                    <ul>
+                        <li value="Mamma" onClick={((e) => this.handleClick(e))}>Mamma</li>
+                        <li value="Babbo" onClick={((e) => this.handleClick(e))}>Babbo</li>
+                        <li value="Zio"  onClick={((e) => this.handleClick(e))}>Zio</li>
+                    </ul>
                     <Stringa selection={this.state.selection}/>
                     </div>
                 );
@@ -43,7 +45,7 @@
                 super(props);
             }
             render (props) {
-                return (<p>Current Selection: {this.props.selection}</p>);
+                return (<p>Current Selection: <b>{this.props.selection}</b></p>);
             }
         }
 
