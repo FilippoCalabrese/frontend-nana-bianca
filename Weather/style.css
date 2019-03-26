@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+}
+
+.black {
+    background-color: rebeccapurple;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+td {
+    border: 2px solid blue;
+    padding: 10px;  
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+    height: 50px;
+    padding-top: 20px;
+}
+
+.table-head {
+    color: white;
+    background-color: black;
+    border: unset !important;
+}
